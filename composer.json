@@ -1,0 +1,12 @@
+{
+    "name": "motwreen/whm",
+    "description": "WHM Sdk For laravel",
+    "authors": [
+        {
+            "name": "Ahmed Gad",
+            "email": "admin@motwreen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
