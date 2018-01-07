@@ -24,6 +24,7 @@ class Whm
 		return [
 			'listaccts'=>[],
 			'listpkgs'=>[],
+			'getpkginfo'=>['pkg'],
 			'accountsummary'=>[],
 			'createacct'=>[],
 			'suspendacct'=>['user','reason'],

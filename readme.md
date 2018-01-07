@@ -1,4 +1,4 @@
-# WHMCPanel API Laravel Implementation 
+# Whm API Laravel Implementation 
 
 ## Installation
 
@@ -46,12 +46,49 @@ php artisan vendor:publish --tag=whm
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use WHMCPanel;
+use Whm;
 class TestController extends Controller
 {
     public function index()
     {
-        WHMCPanel::listaccts(); \\list all accounts data in server
+        Whm::listaccts(); \\list all accounts data in server
+    }
+}
+
+```
+
+### List Packages 
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Whm;
+class TestController extends Controller
+{
+    public function index()
+    {
+        Whm::listpkgs(); \\list all packages data in server
+    }
+}
+
+```
+
+
+### Get Package Info 
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Whm;
+class TestController extends Controller
+{
+    public function index()
+    {
+        Whm::getpkginfo(['pkg'=>'PACKAGE NAME']); \\list all packages data in server
     }
 }
 
@@ -66,12 +103,12 @@ class TestController extends Controller
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use WHMCPanel;
+use Whm;
 class TestController extends Controller
 {
     public function index()
     {
-        WHMCPanel::suspendacct(['user'=>'User Name','reason'=>'Reason String']); \\ Suspend Account using it's  username
+        Whm::suspendacct(['user'=>'User Name','reason'=>'Reason String']); \\ Suspend Account using it's  username
     }
 }
 
@@ -84,10 +121,11 @@ class TestController extends Controller
 
     1-listaccts
 	2-listpkgs
-	3-accountsummary
-	4-createacct
-	5-suspendacct
-	6-unsuspendacct
+    3-getpkginfo
+	4-accountsummary
+	5-createacct
+	6-suspendacct
+	7-unsuspendacct
 
 
 ## To Do
